@@ -10,7 +10,7 @@ namespace TiltEm
         /// <param name="quaternion">Quaternion to apply the rotation to</param>
         /// <param name="tilt">Rotation to apply</param>
         /// <returns>Rotated Quaternion</returns>
-        public static Quaternion ApplyWorldRotation(Quaternion quaternion, Vector3 tilt) => quaternion * (Quaternion.Inverse(quaternion) * Quaternion.Euler(tilt)) * quaternion;
+        public static QuaternionD ApplyWorldRotation(QuaternionD quaternion, Vector3 tilt) => quaternion * (QuaternionD.Inverse(quaternion) * QuaternionD.Euler(tilt)) * quaternion;
 
         /// <summary>
         /// Does the same as Transform.Rotate but against a given quaternion and against LOCAL space
@@ -18,7 +18,7 @@ namespace TiltEm
         /// <param name="quaternion">Quaternion to apply the rotation to</param>
         /// <param name="tilt">Rotation to apply</param>
         /// <returns>Rotated Quaternion</returns>
-        public static Quaternion ApplyLocalRotation(Quaternion quaternion, Vector3 tilt) => quaternion * Quaternion.Euler(tilt);
+        public static QuaternionD ApplyLocalRotation(QuaternionD quaternion, Vector3 tilt) => quaternion * QuaternionD.Euler(tilt);
 
         /// <summary>
         /// Removes the tilt from the given planet and sets it back as default
@@ -37,8 +37,8 @@ namespace TiltEm
         public static void RestorePlanetariumTilt()
         {
             Planetarium.CelestialFrame.PlanetaryFrame(0, 90, Planetarium.InverseRotAngle, ref Planetarium.Zup);
-            var quaternionD = QuaternionD.Inverse(Planetarium.Zup.Rotation);
-            Planetarium.Rotation = quaternionD.swizzle;
+            var quaternion = QuaternionD.Inverse(Planetarium.Zup.Rotation);
+            Planetarium.Rotation = quaternion.swizzle;
         }
 
         /// <summary>
