@@ -38,13 +38,13 @@
       <HintPath>..\External\KSPLibraries\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Kopernicus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\External\Nuget\Kopernicus.1.7.1.5\lib\net35\Kopernicus.dll</HintPath>
+      <HintPath>..\External\kopernicus\Kopernicus.dll</HintPath>
     </Reference>
     <Reference Include="Kopernicus.Parser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\External\Nuget\Kopernicus.Parser.1.7.1.5\lib\net35\Kopernicus.Parser.dll</HintPath>
+      <HintPath>..\External\Kopernicus\Kopernicus.Parser.dll</HintPath>
     </Reference>
     <Reference Include="ModularFlightIntegrator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\External\Nuget\ModularFlightIntegrator.1.2.6.3\lib\net35\ModularFlightIntegrator.dll</HintPath>
+      <HintPath>..\External\ModularFlightIntegrator.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="UnityEngine">
